@@ -2,13 +2,10 @@
 package com.thezomg.bungee.serverkeeper;
 
 import java.util.logging.Level;
-import java.util.logging.Logger;
 import net.craftminecraft.bungee.bungeeyaml.bukkitapi.InvalidConfigurationException;
 import net.md_5.bungee.api.config.ServerInfo;
 import net.md_5.bungee.api.connection.ProxiedPlayer;
-import net.md_5.bungee.api.event.LoginEvent;
 import net.md_5.bungee.api.event.PostLoginEvent;
-import net.md_5.bungee.api.event.ServerConnectEvent;
 import net.md_5.bungee.api.event.ServerConnectedEvent;
 import net.md_5.bungee.api.plugin.Listener;
 
@@ -22,7 +19,7 @@ public class ServerJoinListener implements Listener {
     
     void onLogin(PostLoginEvent event) {
         ProxiedPlayer player = event.getPlayer();
-        ServerInfo server = plugin.getProxy().getServerInfo("Lobby");
+        ServerInfo server = plugin.getProxy().getServerInfo(plugin.config.defaultserver);
         if (plugin.config.players.keySet().contains(player.getName().toLowerCase())) {
             server = plugin.getProxy().getServers().get(plugin.config.players.get(player.getName().toLowerCase()));
         }

@@ -4,6 +4,6 @@ BungeeCord server keeper plugin.  It will reconnect the user to the last server 
 
 ## To-do ##
 
-- Add some additional configuration to the plugin to specify the default server.
-- Add the ability for specified host names to go directly to a server.
+- [x] Add some additional configuration to the plugin to specify the default server.
+- [ ] Add the ability for specified host names to go directly to a server.
 

@@ -24,4 +24,6 @@ public class MainConfig extends Config {
     }
     
     public Map<String, String> players = new HashMap<String, String>();
+    
+    public String defaultserver = "lobby";
 }
