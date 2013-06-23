@@ -1,0 +1,4 @@
+name: ServerKeeper
+main: com.thezomg.bungee.serverkeeper.ServerKeeper
+version: ${pom.version}-${build.number}
+author: Deaygo
